@@ -39,14 +39,14 @@ const vscode = __importStar(require("vscode"));
 const path = __importStar(require("path"));
 const pdfGenerator_1 = require("./pdfGenerator");
 function activate(context) {
-    const provider = new Code2PDFViewProvider(context.extensionUri);
-    context.subscriptions.push(vscode.window.registerWebviewViewProvider('code2pdf.settingsView', provider));
-    const disposable = vscode.commands.registerCommand('code2pdf.printToPDF', async () => {
-        await vscode.commands.executeCommand('workbench.view.extension.code2pdf-sidebar');
+    const provider = new  ExporterViewProvider(context.extensionUri);
+    context.subscriptions.push(vscode.window.registerWebviewViewProvider('codepdf-exporter.settingsView', provider));
+    const disposable = vscode.commands.registerCommand('codepdf-exporter.printToPDF', async () => {
+        await vscode.commands.executeCommand('workbench.view.extension.codepdf-exporter-sidebar');
     });
     context.subscriptions.push(disposable);
 }
-class Code2PDFViewProvider {
+class CodePDFExporterViewProvider {
     _extensionUri;
     constructor(_extensionUri) {
         this._extensionUri = _extensionUri;
@@ -102,7 +102,7 @@ class Code2PDFViewProvider {
                 }
                 await vscode.window.withProgress({
                     location: vscode.ProgressLocation.Notification,
-                    title: 'Code2PDF: Generating PDF...',
+                    title: 'CodePDF Exporter: Generating PDF...',
                     cancellable: false
                 }, async () => {
                     try {
@@ -127,7 +127,7 @@ class Code2PDFViewProvider {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code2PDF</title>
+    <title>CodePDF Exporter</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 

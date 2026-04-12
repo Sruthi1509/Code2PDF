@@ -1,11 +1,11 @@
-# Code2PDF
+# CodePDF Exporter
 
 ![VS Code Marketplace](https://img.shields.io/badge/VSCode-Marketplace-blue)
 ![Downloads](https://img.shields.io/badge/downloads-0-brightgreen)
 ![Version](https://img.shields.io/badge/version-0.0.1-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-![Code2PDF Preview](images/demo.gif)
+![CodePDF Exporter Preview](images/demo.gif)
 
 
 
@@ -31,12 +31,12 @@ Perfect for printing code, sharing projects, and generating clean documentation.
 
 1. Open **VS Code**
 2. Go to **Extensions** (`Ctrl+Shift+X`)
-3. Search for **Code2PDF**
+3. Search for **CodePDF Exporter**
 4. Click **Install**
 
 ## Usage
 
-1. Click the **Code2PDF** icon in the Activity Bar (left sidebar)
+1. Click the **CodePDF Exporter** icon in the Activity Bar (left sidebar)
 2. Choose **Whole Project** or **Select Specific Files**
 3. Adjust font size and options as needed
 4. Click **Generate PDF**

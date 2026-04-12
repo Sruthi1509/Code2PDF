@@ -1,6 +1,6 @@
 {
-  "name": "code2pdf",
-  "displayName": "Code2PDF - Export Code to PDF",
+  "name": "codepdf-exporter",
+  "displayName": "CodePDF Exporter",
   "description": "Export your entire VS Code project or selected files to a clean PDF with file titles, line numbers, and font customization. Perfect for printing code, sharing projects, and documentation.",
   "version": "0.0.1",
   "publisher": "smenon",
@@ -8,9 +8,9 @@
   "icon": "icons/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sruthi1509/Code2PDF"
+    "url": "https://github.com/Sruthi1509/codepdf-exporter"
   },
-  "homepage": "https://github.com/Sruthi1509/Code2PDF",
+  "homepage": "https://github.com/Sruthi1509/codepdf-exporter",
   "keywords": [
     "pdf",
     "code",
@@ -22,7 +22,8 @@
     "print code",
     "project to pdf",
     "documentation",
-    "conversion"
+    "conversion",
+    "export to pdf"
   ],
   "engines": {
     "vscode": "^1.108.0"
@@ -36,7 +37,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "code2pdf.printToPDF",
+        "command": "codepdf-exporter.printToPDF",
         "title": "Export to PDF",
         "icon": "$(file-pdf)"
       }
@@ -44,17 +45,17 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "code2pdf-sidebar",
-          "title": "Code2PDF",
+          "id": "codepdf-exporter-sidebar",
+          "title": "CodePDF Exporter",
           "icon": "$(file-pdf)"
         }
       ]
     },
     "views": {
-      "code2pdf-sidebar": [
+      "codepdf-exporter-sidebar": [
         {
           "type": "webview",
-          "id": "code2pdf.settingsView",
+          "id": "codepdf-exporter.settingsView",
           "name": "Print Settings"
         }
       ]
@@ -62,7 +63,7 @@
     "menus": {
       "editor/title": [
         {
-          "command": "code2pdf.printToPDF",
+          "command": "codepdf-exporter.printToPDF",
           "group": "navigation",
           "when": "editorIsOpen"
         }
