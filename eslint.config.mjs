@@ -2,7 +2,6 @@ import typescriptEslint from "typescript-eslint";
 
 export default [{
     files: ["**/*.ts"],
-}, {
     plugins: {
         "@typescript-eslint": typescriptEslint.plugin,
     },
@@ -24,4 +23,6 @@ export default [{
         "no-throw-literal": "warn",
         semi: "warn",
     },
+}, {
+    ignores: ["out/**", "dist/**", "node_modules/**"],
 }];

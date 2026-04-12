@@ -1,79 +1,99 @@
 {
   "name": "code2pdf",
-  "displayName": "code2pdf",
-  "description": "Convert project code to PDF",
+  "displayName": "Code2PDF - Export Code to PDF",
+  "description": "Export your entire VS Code project or selected files to a clean PDF with file titles, line numbers, and font customization. Perfect for printing code, sharing projects, and documentation.",
   "version": "0.0.1",
+  "publisher": "smenon",
+  "license": "MIT",
+  "icon": "icons/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sruthi1509/Code2PDF"
+  },
+  "homepage": "https://github.com/Sruthi1509/Code2PDF",
+  "keywords": [
+    "pdf",
+    "code",
+    "export",
+    "print",
+    "project",
+    "code to pdf",
+    "export code",
+    "print code",
+    "project to pdf",
+    "documentation",
+    "conversion"
+  ],
   "engines": {
     "vscode": "^1.108.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Formatters"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
-        {
-            "command": "code2pdf.printToPDF",
-            "title": "Export to PDF",
-            "icon": "$(file-pdf)"
-        }
+      {
+        "command": "code2pdf.printToPDF",
+        "title": "Export to PDF",
+        "icon": "$(file-pdf)"
+      }
     ],
     "viewsContainers": {
-        "activitybar": [
-            {
-                "id": "code2pdf-sidebar",
-                "title": "Code2PDF",
-                "icon": "$(file-pdf)"
-            }
-        ]
+      "activitybar": [
+        {
+          "id": "code2pdf-sidebar",
+          "title": "Code2PDF",
+          "icon": "$(file-pdf)"
+        }
+      ]
     },
     "views": {
-        "code2pdf-sidebar": [
-            {
-                "type": "webview",
-                "id": "code2pdf.settingsView",
-                "name": "Print Settings"
-            }
-        ]
+      "code2pdf-sidebar": [
+        {
+          "type": "webview",
+          "id": "code2pdf.settingsView",
+          "name": "Print Settings"
+        }
+      ]
     },
     "menus": {
-        "editor/title": [
-            {
-                "command": "code2pdf.printToPDF",
-                "group": "navigation",
-                "when": "editorIsOpen"
-            }
-        ]
+      "editor/title": [
+        {
+          "command": "code2pdf.printToPDF",
+          "group": "navigation",
+          "when": "editorIsOpen"
+        }
+      ]
     }
-},
+  },
   "scripts": {
     "vscode:prepublish": "npm run package",
-    "compile": "npm run check-types && npm run lint && node esbuild.js",
-    "watch": "npm-run-all -p watch:*",
+    "compile": "npm run check-types && npm run lint",
+    "watch": "npm run watch:tsc & npm run watch:esbuild",
+    "watch:tsc": "tsc -watch -p ./",
     "watch:esbuild": "node esbuild.js --watch",
-    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "package": "npm run check-types && npm run lint && node esbuild.js --production",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "package": "npm run check-types && npm run lint && npm run test && node esbuild.js",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "@types/vscode": "^1.110.0",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2",
-    "esbuild": "^0.27.3",
-    "eslint": "^9.39.3",
-    "npm-run-all": "^4.1.5",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "test": "vscode-test",
+    "watch-tests": "npm run test -- --watch"
   },
   "dependencies": {
     "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.108.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.3.0",
+    "esbuild": "^0.19.0",
+    "eslint": "^8.0.0",
+    "typescript-eslint": "^8.58.1"
   }
 }

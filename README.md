@@ -1,6 +1,17 @@
 # Code2PDF
 
-A VS Code extension that converts your project's source code into a clean, formatted PDF document — perfect for submissions, reviews, or offline reading.
+![VS Code Marketplace](https://img.shields.io/badge/VSCode-Marketplace-blue)
+![Downloads](https://img.shields.io/badge/downloads-0-brightgreen)
+![Version](https://img.shields.io/badge/version-0.0.1-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+![Code2PDF Preview](images/demo.gif)
+
+
+
+A VS Code extension that lets you export your VS Code project or selected files to PDF.  
+Perfect for printing code, sharing projects, and generating clean documentation.
+
 
 ## Features
 
@@ -15,6 +26,13 @@ A VS Code extension that converts your project's source code into a clean, forma
 ## Supported Languages
 
 `.ts` `.js` `.py` `.java` `.cpp` `.c` `.cs` `.html` `.css` `.scss` `.php` `.rb` `.go` `.rs` `.swift` `.kt` `.dart` `.tsx` `.jsx` `.vue` `.sh` `.bash` `.yaml` `.yml` `.xml`
+
+## Installation
+
+1. Open **VS Code**
+2. Go to **Extensions** (`Ctrl+Shift+X`)
+3. Search for **Code2PDF**
+4. Click **Install**
 
 ## Usage
 
@@ -38,3 +56,8 @@ This extension does not add any VS Code settings. All configuration is done thro
 - New page per file toggle
 - Line numbers with separator
 - Automatic line wrapping
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome.  
+Feel free to open a pull request on GitHub.
