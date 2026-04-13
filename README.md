@@ -1,11 +1,13 @@
 # CodePDF Exporter
 
-![VS Code Marketplace](https://img.shields.io/badge/VSCode-Marketplace-blue)
-![Installs](https://img.shields.io/visual-studio-marketplace/i/smenon.codepdf-exporter-green)
-![Version](https://img.shields.io/badge/version-0.0.2-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![VS Marketplace](https://img.shields.io/visual-studio-marketplace/v/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
 
-![CodePDF Exporter Preview](images/demo.gif)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
+
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
+
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 
 
 
