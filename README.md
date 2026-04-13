@@ -1,14 +1,6 @@
 # CodePDF Exporter
 
-[![VS Marketplace](https://img.shields.io/visual-studio-marketplace/v/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
-
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
-
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/smenon.codepdf-exporter)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter)
-
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
-
+[![Marketplace](https://img.shields.io/badge/VS%20Marketplace-CodePDF%20Exporter-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter) [![Version](https://img.shields.io/badge/version-0.0.2-green)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter) [![Installs](https://img.shields.io/badge/installs-growing-brightgreen?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=smenon.codepdf-exporter) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 
 A VS Code extension that lets you export your VS Code project or selected files to PDF.  
